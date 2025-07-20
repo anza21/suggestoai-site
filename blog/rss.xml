@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel><item><title>Best Wireless Earbuds 2025: AI-Powered Recommendations</title><link>https://suggestoai.com/blog/posts/20250721-best-wireless-earbuds-2025-ai-powered-recommendati.html</link><description>Discover the top wireless earbuds of 2025 with our AI-powered analysis. We've compared features, sound quality, and value to find the best options for every budget.</description><pubDate>Mon, 21 Jul 2025 00:32:13 +0000</pubDate><guid>https://suggestoai.com/blog/posts/20250721-best-wireless-earbuds-2025-ai-powered-recommendati.html</guid></item>
+<title>SuggestoAI Blog</title>
+<link>https://suggestoai.com/blog/</link>
+<description>AI-powered product reviews, recommendations, and insights from SuggestoAI</description>
+<language>en</language>
+<lastBuildDate>Mon, 21 Jul 2025 00:32:13 +0000</lastBuildDate>
+<atom:link href="https://suggestoai.com/blog/rss.xml" rel="self" type="application/rss+xml"/>
+<!-- Posts will be dynamically added here by publish_post.py -->
+</channel>
+</rss>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - SuggestoAI | AI Product Reviews & Recommendations</title>
+  <meta name="description" content="Discover the latest AI-powered product reviews, recommendations, and insights from SuggestoAI. Expert analysis of trending products from Amazon, AliExpress, and more." />
+  <meta name="keywords" content="AI reviews, product recommendations, tech reviews, shopping guide, SuggestoAI blog" />
+  <meta name="author" content="Antonios Zacharas" />
+  <meta property="og:title" content="Blog - SuggestoAI | AI Product Reviews & Recommendations" />
+  <meta property="og:description" content="Discover the latest AI-powered product reviews, recommendations, and insights from SuggestoAI." />
+  <meta property="og:image" content="../logo-hero.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://suggestoai.com/blog/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog - SuggestoAI | AI Product Reviews & Recommendations" />
+  <meta name="twitter:description" content="Discover the latest AI-powered product reviews, recommendations, and insights from SuggestoAI." />
+  <meta name="twitter:image" content="../logo-hero.png" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="alternate" type="application/rss+xml" title="SuggestoAI Blog RSS" href="rss.xml" />
+  <style>
+    .blog-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    .blog-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .blog-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+    }
+    .blog-header p {
+      font-size: 1.2rem;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    .post-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    .post-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .post-content {
+      padding: 1.5rem;
+    }
+    .post-meta {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+    .post-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #333;
+      line-height: 1.4;
+    }
+    .post-excerpt {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .read-more {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .read-more:hover {
+      text-decoration: underline;
+    }
+    .no-posts {
+      text-align: center;
+      padding: 3rem;
+      color: #666;
+    }
+    @media (max-width: 768px) {
+      .blog-container {
+        padding: 1rem;
+      }
+      .blog-header h1 {
+        font-size: 2rem;
+      }
+      .posts-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <a href="../index.html"><img src="../logo.png" alt="SuggestoAI Logo" class="nav-logo"></a>
+      <div class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../ai-recommends.html">AI Recommends</a>
+        <a href="../for-brands.html">For Brands</a>
+        <a href="index.html" class="active">Blog</a>
+        <a href="../about.html">About / Legal</a>
+        <a href="../privacy/index.html">Privacy</a>
+        <a href="../terms.html">Terms</a>
+        <a href="../delete-data.html">Delete Data</a>
+      </div>
+    </div>
+    <div class="lang-switcher">
+      <button id="lang-en" class="lang-btn">EN</button>
+      <button id="lang-gr" class="lang-btn">GR</button>
+      <button id="lang-es" class="lang-btn">ES</button>
+      <button id="lang-fr" class="lang-btn">FR</button>
+      <button id="lang-it" class="lang-btn">IT</button>
+      <button id="lang-de" class="lang-btn">DE</button>
+    </div>
+  </nav>
+
+  <main>
+    <div class="blog-container">
+      <div class="blog-header">
+        <h1>SuggestoAI Blog</h1>
+        <p>Discover the latest AI-powered product reviews, recommendations, and insights. Expert analysis of trending products from Amazon, AliExpress, and more.</p>
+      </div>
+
+      <div class="posts-grid" id="posts-container">
+        <!-- Posts will be dynamically loaded here -->
+        <div class="no-posts">
+          <h3>No posts yet</h3>
+          <p>Check back soon for our latest AI-powered product reviews and recommendations!</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    SuggestoAI © 2025 | contact@suggestoai.com | <a href="../privacy/index.html">Privacy Policy</a><br>
+    This website is owned and operated by Antonios Zacharas | Kamatero, Greece
+  </footer>
+
+  <script>
+    // Language toggle logic
+    const langs = ['en','gr','es','fr','it','de'];
+    function showLang(lang) {
+      ['hero','benefits'].forEach(function(section) {
+        langs.forEach(function(l) {
+          const el = document.getElementById(section+'-'+l);
+          if (el) el.style.display = (l===lang) ? 'block' : 'none';
+        });
+      });
+    }
+    
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const lang = this.id.replace('lang-', '');
+        showLang(lang);
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+
+    // Load posts from posts directory
+    async function loadPosts() {
+      try {
+        const response = await fetch('posts/posts.json');
+        if (response.ok) {
+          const posts = await response.json();
+          displayPosts(posts);
+        }
+      } catch (error) {
+        console.log('No posts.json found or error loading posts');
+      }
+    }
+
+    function displayPosts(posts) {
+      const container = document.getElementById('posts-container');
+      if (posts.length === 0) {
+        container.innerHTML = `
+          <div class="no-posts">
+            <h3>No posts yet</h3>
+            <p>Check back soon for our latest AI-powered product reviews and recommendations!</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = posts.map(post => `
+        <article class="post-card">
+          <img src="${post.image}" alt="${post.title}" class="post-image">
+          <div class="post-content">
+            <div class="post-meta">${post.date} • ${post.category}</div>
+            <h2 class="post-title">${post.title}</h2>
+            <p class="post-excerpt">${post.excerpt}</p>
+            <a href="posts/${post.filename}" class="read-more">Read More →</a>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    // Load posts on page load
+    loadPosts();
+  </script>
+</body>
+</html> 
