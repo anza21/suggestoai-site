@@ -1,0 +1,9 @@
+{
+  "title": "Test Markdown Conversion - AI Agent Fix",
+  "description": "Testing the markdown to HTML conversion fix in publish_post.py",
+  "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
+  "affiliate_link": "https://s.click.aliexpress.com/deep_link.htm?aff_short_key=YOUR_PID&dl_target_url=https://www.aliexpress.com/item/1234567890.html",
+  "content": "# Test Markdown Conversion\n\nThis is a **test post** to verify that markdown is properly converted to HTML.\n\n## Features Tested\n\n- **Bold text** should work\n- *Italic text* should work\n- [Links](https://example.com) should work\n- Lists should work:\n  - Item 1\n  - Item 2\n  - Item 3\n\n### Code Block Test\n\n```python\nprint('Hello, World!')\n```\n\n### Table Test\n\n| Feature | Status |\n|---------|--------|\n| Bold | ✅ |\n| Italic | ✅ |\n| Links | ✅ |\n| Lists | ✅ |\n\n## Conclusion\n\nIf you can see this properly formatted, the **markdown to HTML conversion is working!** 🎉\n\nThis means the AI agent can now produce properly formatted blog posts.",
+  "category": "Technical Update",
+  "keywords": "markdown, html, conversion, test, ai agent, blog"
+} 

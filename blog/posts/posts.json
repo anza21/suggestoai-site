@@ -1,5 +1,15 @@
 [
   {
+    "title": "Test Markdown Conversion - AI Agent Fix",
+    "excerpt": "Testing the markdown to HTML conversion fix in publish_post.py",
+    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=600&fit=crop",
+    "filename": "20250721-test-markdown-conversion---ai-agent-fix.html",
+    "date": "July 21, 2025",
+    "category": "Technical Update",
+    "keywords": "markdown, html, conversion, test, ai agent, blog",
+    "content": "# Test Markdown Conversion\n\nThis is a **test post** to verify that markdown is properly converted to HTML.\n\n## Features Tested\n\n- **Bold text** should work\n- *Italic text* should work\n- [Links](https://example.com) should work\n- Lists should work:\n  - Item 1\n  - Item 2\n  - Item 3\n\n### Code Block Test\n\n```python\nprint('Hello, World!')\n```\n\n### Table Test\n\n| Feature | Status |\n|---------|--------|\n| Bold | ✅ |\n| Italic | ✅ |\n| Links | ✅ |\n| Lists | ✅ |\n\n## Conclusion\n\nIf you can see this properly formatted, the **markdown to HTML conversion is working!** 🎉\n\nThis means the AI agent can now produce properly formatted blog posts."
+  },
+  {
     "title": "Best LIGE UV400 Sunglasses Review 2024 - Save 80% Off!",
     "excerpt": "Save 80% on LIGE UV400 Protection Anti-blue Polarized Sunglasses. Only $27.99 (was $139.95)!",
     "image": "https://ae-pic-a1.aliexpress-media.com/kf/S8ae215ff5bc64a29a62cd9f432451f42d.jpg",

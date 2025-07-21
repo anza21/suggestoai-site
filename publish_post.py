@@ -21,6 +21,7 @@ import subprocess
 import re
 from bs4 import BeautifulSoup
 from urllib.parse import quote
+import markdown
 
 parser = argparse.ArgumentParser(description='Auto-publish AI product recommendation.')
 parser.add_argument('--title', help='Product title')
@@ -165,6 +166,9 @@ def create_blog_post(post_data):
     with open(template_file, 'r', encoding='utf-8') as f:
         template = f.read()
     
+    # Convert markdown content to HTML
+    html_content = markdown.markdown(post_data['content'], extensions=['fenced_code', 'tables', 'nl2br'])
+    
     # Replace placeholders
     replacements = {
         '{{TITLE}}': post_data['title'],
@@ -174,7 +178,7 @@ def create_blog_post(post_data):
         '{{FILENAME}}': post_data['filename'],
         '{{PUBLISH_DATE}}': post_data['date'],
         '{{CATEGORY}}': post_data['category'],
-        '{{CONTENT}}': post_data['content']
+        '{{CONTENT}}': html_content
     }
     
     for placeholder, value in replacements.items():
