@@ -2,6 +2,16 @@
 
 All notable changes to the suggestoai-site project will be documented in this file.
 
+## [2025-01-21] - Blog System Implementation & Markdown Fix
+
+### Fixed
+- **CRITICAL**: Markdown to HTML conversion in blog posts
+  - Added `markdown` dependency to `requirements.txt`
+  - Updated `publish_post.py` to convert markdown content to HTML
+  - Added extensions: `fenced_code`, `tables`, `nl2br`
+  - Tested with sample post - all formatting working correctly
+  - **Result**: Blog posts now display properly formatted HTML instead of raw markdown
+
 ## [2025-01-21] - Blog System Implementation
 
 ### Added
